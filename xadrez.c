@@ -30,6 +30,8 @@ int main() {
         i++;
     }
 
+    printf("\n");
+
     // Implementação de Movimentação da Rainha: A rainha vai se mover 8 casas para a esquerda
     printf("Movimento da Rainha:\n");
     
@@ -39,11 +41,29 @@ int main() {
         j++;
     } while (j <= casasRainha);
 
+    printf("\n");
+
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Movimento do Cavalo:\n");
+    int casasBaixo = 2;
+    int casasEsquerda = 1;
 
+    // Loop externo (for) controla as casas para baixo
+    for (int x = 1; x <= casasBaixo; x++) {
+        printf("Baixo\n");
+
+        // Loop interno (while) só executa quando estivermos na última descida
+        if (x == casasBaixo) {
+            int y = 1;
+            while (y <= casasEsquerda) {
+                printf("Esquerda\n");
+                y++;
+            }
+        }
+    }
+
+    
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
